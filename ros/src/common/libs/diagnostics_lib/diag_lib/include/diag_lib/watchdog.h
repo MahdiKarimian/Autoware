@@ -22,6 +22,7 @@
 #include <boost/shared_ptr.hpp>
 #include <boost/thread.hpp>
 #include <boost/bind.hpp>
+#include <boost/filesystem.hpp>
 
 class watchdog
 {
@@ -44,5 +45,6 @@ private:
     ros::Publisher diag_pub_;
     void update_connection_status_();
     void publish_diag_();
+    void write_error_code_csv_(YAML::Node config);
 };
 #endif  //WATCHDOG_H_INCLUDED

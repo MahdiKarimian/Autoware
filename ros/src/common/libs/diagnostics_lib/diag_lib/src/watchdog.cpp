@@ -34,12 +34,51 @@ watchdog::watchdog()
             }
         }
     }
+    write_error_code_csv_(config);
     diag_pub_ = nh_.advertise<diag_msgs::diag>(ros::this_node::getName()+"/diag/all", 1);
 }
 
 watchdog::~watchdog()
 {
     
+}
+
+void watchdog::write_error_code_csv_(YAML::Node config)
+{
+    namespace fs = boost::filesystem;
+    const fs::path path("/tmp/Autoware/Diag/");
+    boost::system::error_code error;
+    const bool result = fs::create_directories(path, error);
+    std::string write_string = "node_name,node_number,num,name,category,description,threshold,level\n";
+    for(YAML::const_iterator it=config.begin();it != config.end();++it)
+    {
+        std::string node_name = it->first.as<std::string>();
+        YAML::Node target_node = config[node_name];
+        int node_number = target_node["node_number"].as<int>();
+        for(const YAML::Node &error : target_node["errors"])
+        {
+            std::string line = "";
+            int num = error["num"].as<int>();
+            std::string name = error["name"].as<std::string>();
+            int category = error["category"].as<int>();
+            std::string description = error["description"].as<std::string>();
+            if((category == LOW_SUBSCRIBE_RATE) || (category == LOW_PUBLISH_RATE) || (category == LOW_OPERATION_CYCLE))
+            {
+                double threashold = error["threshold"].as<double>();
+                std::string level = error["level"].as<std::string>();
+                line = node_name + "," + std::to_string(node_number) + "," + std::to_string(num) + "," + name + "," + std::to_string(category) + "," + description + "," + std::to_string(threashold) + "," + level + "\n";
+            }
+            else
+            {
+                line = node_name + "," + std::to_string(node_number) + "," + std::to_string(num) + "," + name + "," + std::to_string(category) + "," + description + ",,\n";
+            }
+            write_string = write_string + line;
+        }
+    }
+    std::ofstream outputfile(std::string("/tmp/Autoware/Diag/error_list.csv").c_str());
+    outputfile << write_string;
+    outputfile.close();
+    return;
 }
 
 void watchdog::publish_diag_()
