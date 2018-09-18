@@ -9,6 +9,23 @@ Changelog for package points2polygon
 * [Fix] Extend and Update interface.yaml (`#1291 <https://github.com/CPFL/Autoware/pull/1291>`_)
 * Contributors: Esteve Fernandez, Kenji Funaoka
 
+Forthcoming
+-----------
+* [Release] 1.8.0 merged back to develop (`#1488 <https://github.com/CPFL/Autoware/issues/1488>`_)
+* 1.8.0
+* Fix links to pull request in CHANGELOG
+* Update CHANGELOG
+* Merge branch 'develop' into feature/OpenPlanner-dev
+* [Fix] Moved C++11 flag to autoware_build_flags (`#1395 <https://github.com/CPFL/Autoware/issues/1395>`_)
+* [Feature] Makes sure that all binaries have their dependencies linked (`#1385 <https://github.com/CPFL/Autoware/issues/1385>`_)
+* Merge branch 'develop' of https://github.com/CPFL/Autoware into feature/pictogram_pos_db
+* [Fix] Extend and Update interface.yaml (`#1291 <https://github.com/CPFL/Autoware/issues/1291>`_)
+* merge:master
+* Merge pull request `#1278 <https://github.com/CPFL/Autoware/issues/1278>`_ from CPFL/release/1.7.0
+  Release/1.7.0
+* Merge branch 'master' of https://github.com/CPFL/Autoware into feature/pictogram_pos_db
+* Contributors: Esteve Fernandez, Hatem Darweesh, Kenji Funaoka, Masahiro Kitazawa
+
 1.7.0 (2018-05-18)
 ------------------
 * update Version from 1.6.3 to 1.7.0 in package.xml and CHANGELOG.rst
