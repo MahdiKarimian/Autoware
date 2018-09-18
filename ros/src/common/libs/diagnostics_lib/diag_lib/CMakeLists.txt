@@ -47,8 +47,9 @@ foreach(cpp_exec_names ${CPP_EXEC_NAMES})
     RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
     )
 endforeach(cpp_exec_names)
+
 # include header files
-install(DIRECTORY include/
+install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
 )
 

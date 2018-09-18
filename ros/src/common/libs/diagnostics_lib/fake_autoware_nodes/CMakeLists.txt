@@ -26,16 +26,18 @@ include_directories(
 set(fake_publisher_node_src src/fake_publisher_node.cpp src/fake_publisher.cpp)
 add_executable(fake_publisher_node ${fake_publisher_node_src})
 target_link_libraries(fake_publisher_node ${catkin_LIBRARIES})
+add_dependencies(fake_publisher_node diag_msgs_generate_messages_cpp)
 
 set(fake_subscriber_node_src src/fake_subscriber_node.cpp src/fake_subscriber.cpp)
 add_executable(fake_subscriber_node ${fake_subscriber_node_src})
 target_link_libraries(fake_subscriber_node ${catkin_LIBRARIES})
+add_dependencies(fake_publisher_node diag_msgs_generate_messages_cpp)
 
-foreach(dir launch config)
+foreach(dir launch)
   install(DIRECTORY ${dir}/
     DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
 endforeach(dir)
 
-install(DIRECTORY include
+install(DIRECTORY include/${PROJECT_NAME}
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
 )
