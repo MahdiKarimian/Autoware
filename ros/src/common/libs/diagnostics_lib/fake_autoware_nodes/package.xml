@@ -1,7 +1,6 @@
-<?xml version="1.0"?>
 <package format="2">
   <name>fake_autoware_nodes</name>
-  <version>0.0.0</version>
+  <version>1.0.0</version>
   <description>The fake_autoware_nodes package</description>
 
   <maintainer email="ms.kataoka@gmail.com">Masaya Kataoka</maintainer>

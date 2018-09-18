@@ -32,6 +32,82 @@ Changelog for package op_ros_helpers
 
 Forthcoming
 -----------
+* remove unused comment
+* [Release] 1.8.0 merged back to develop (`#1488 <https://github.com/CPFL/Autoware/issues/1488>`_)
+* 1.8.0
+* Fix links to pull request in CHANGELOG
+* Update CHANGELOG
+* Merge pull request `#1400 <https://github.com/CPFL/Autoware/issues/1400>`_ from CPFL/feature/OpenPlanner-dev
+  Feature/open planner dev
+* Merge branch 'develop' into feature/OpenPlanner-dev
+* [Fix] Moved C++11 flag to autoware_build_flags (`#1395 <https://github.com/CPFL/Autoware/issues/1395>`_)
+* [Feature] Makes sure that all binaries have their dependencies linked (`#1385 <https://github.com/CPFL/Autoware/issues/1385>`_)
+* Fix Vector Map parser problem, tested with three different maps
+  Fix Global Planning function for the new map modification
+  Add OpenPlanner Simulator for perception, traffic lights, cars
+  Add OpenPlanner new version to replace wp_planner and dp_planner
+  Remove unnecessary files from OpenPlanner libraries
+  Test Global and Local planning
+  Test Tracking node (kf_contour_track)
+  Test Simulation Nodes
+  Test Utility Nodes
+* Update op_utility files for csv files loading
+  Update MappingHelpers with latest modifications
+  Update PlanningHelpers with latest modifications
+  add op_common_param node, for setting OpenPlanner parameter for all related nodes such as lidar_kf_contour_track
+  Improve tracking by including size different in association function
+  Update way_planner, dp_planner for compatibility with new Mapping Modifications, Map format is backward compatible
+* Update OpenPlanner libraries (op_planner, op_utitity, op_ros_helpers)
+  Update ring ground filter with latest implementation
+  Update lidar_kf_contour_track with latest implementation
+  Add op_utilities nodes (op_bag_player, op_data_logger, op_pose2tf)
+  Modify autoware_msgs for OpenPlanner use (CloudCluster, DetectedObject, lane, waypoint)
+  Update UI computing.yaml for the new nodes and modifies parameters
+  Update UI sensing.yaml for updated ring_ground_filter params
+* merge:master
+* Merge pull request `#1278 <https://github.com/CPFL/Autoware/issues/1278>`_ from CPFL/release/1.7.0
+  Release/1.7.0
+* Merge branch 'master' of https://github.com/CPFL/Autoware into feature/pictogram_pos_db
+* Contributors: Esteve Fernandez, Hatem Darweesh, Kenji Funaoka, Masahiro Kitazawa, Masaya Kataoka, hatem-darweesh
+
+* remove unused comment
+* [Release] 1.8.0 merged back to develop (`#1488 <https://github.com/CPFL/Autoware/issues/1488>`_)
+* 1.8.0
+* Fix links to pull request in CHANGELOG
+* Update CHANGELOG
+* Merge pull request `#1400 <https://github.com/CPFL/Autoware/issues/1400>`_ from CPFL/feature/OpenPlanner-dev
+  Feature/open planner dev
+* Merge branch 'develop' into feature/OpenPlanner-dev
+* [Fix] Moved C++11 flag to autoware_build_flags (`#1395 <https://github.com/CPFL/Autoware/issues/1395>`_)
+* [Feature] Makes sure that all binaries have their dependencies linked (`#1385 <https://github.com/CPFL/Autoware/issues/1385>`_)
+* Fix Vector Map parser problem, tested with three different maps
+  Fix Global Planning function for the new map modification
+  Add OpenPlanner Simulator for perception, traffic lights, cars
+  Add OpenPlanner new version to replace wp_planner and dp_planner
+  Remove unnecessary files from OpenPlanner libraries
+  Test Global and Local planning
+  Test Tracking node (kf_contour_track)
+  Test Simulation Nodes
+  Test Utility Nodes
+* Update op_utility files for csv files loading
+  Update MappingHelpers with latest modifications
+  Update PlanningHelpers with latest modifications
+  add op_common_param node, for setting OpenPlanner parameter for all related nodes such as lidar_kf_contour_track
+  Improve tracking by including size different in association function
+  Update way_planner, dp_planner for compatibility with new Mapping Modifications, Map format is backward compatible
+* Update OpenPlanner libraries (op_planner, op_utitity, op_ros_helpers)
+  Update ring ground filter with latest implementation
+  Update lidar_kf_contour_track with latest implementation
+  Add op_utilities nodes (op_bag_player, op_data_logger, op_pose2tf)
+  Modify autoware_msgs for OpenPlanner use (CloudCluster, DetectedObject, lane, waypoint)
+  Update UI computing.yaml for the new nodes and modifies parameters
+  Update UI sensing.yaml for updated ring_ground_filter params
+* merge:master
+* Merge pull request `#1278 <https://github.com/CPFL/Autoware/issues/1278>`_ from CPFL/release/1.7.0
+  Release/1.7.0
+* Merge branch 'master' of https://github.com/CPFL/Autoware into feature/pictogram_pos_db
+* Contributors: Esteve Fernandez, Hatem Darweesh, Kenji Funaoka, Masahiro Kitazawa, Masaya Kataoka, hatem-darweesh
+
 * [Release] 1.8.0 merged back to develop (`#1488 <https://github.com/CPFL/Autoware/issues/1488>`_)
 * 1.8.0
 * Fix links to pull request in CHANGELOG
