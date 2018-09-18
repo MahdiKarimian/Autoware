@@ -1,11 +1,13 @@
 <package format="2">
   <name>fake_autoware_nodes</name>
-  <version>1.0.0</version>
+  <version>1.8.0</version>
   <description>The fake_autoware_nodes package</description>
 
-  <maintainer email="ms.kataoka@gmail.com">Masaya Kataoka</maintainer>
+  <maintainer email="masaya.kataoka@tier4.jp">Masaya Kataoka</maintainer>
 
   <license>BSD</license>
+
+  <author email="masaya.kataoka@tier4.jp">Masaya Kataoka</author>
 
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>geometry_msgs</build_depend>
